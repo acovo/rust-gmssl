@@ -1,4 +1,4 @@
-# gmssl-rs
+# rust-gmssl
 
 GmSSL bindings for the Rust programming language.
 
