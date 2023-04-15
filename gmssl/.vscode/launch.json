@@ -1,0 +1,158 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'gmssl'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=gmssl"
+                ],
+                "filter": {
+                    "name": "gmssl",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'mk_certs'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=mk_certs",
+                    "--package=gmssl"
+                ],
+                "filter": {
+                    "name": "mk_certs",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'mk_certs'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=mk_certs",
+                    "--package=gmssl"
+                ],
+                "filter": {
+                    "name": "mk_certs",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'gmssl-sys'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=gmssl-sys"
+                ],
+                "filter": {
+                    "name": "gmssl-sys",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'gmssl-errors'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=gmssl-errors"
+                ],
+                "filter": {
+                    "name": "gmssl-errors",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'test'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test",
+                    "--package=gmssl-errors"
+                ],
+                "filter": {
+                    "name": "test",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'systest'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=systest",
+                    "--package=systest"
+                ],
+                "filter": {
+                    "name": "systest",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'systest'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=systest",
+                    "--package=systest"
+                ],
+                "filter": {
+                    "name": "systest",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

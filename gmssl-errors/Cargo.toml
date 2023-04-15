@@ -1,0 +1,19 @@
+[package]
+name = "gmssl-errors"
+version = "0.1.0"
+authors = ["Jason Honor<jasonhonor@outlook.com>"]
+edition = "2018"
+license = "MIT/Apache-2.0"
+description = "Custom error library support for the gmssl crate."
+repository = "https://github.com/acovo/rust-gmssl"
+readme = "README.md"
+categories = ["api-bindings"]
+
+[dependencies]
+cfg-if = "1.0"
+libc = "0.2"
+
+gmssl-sys = { version = "0.1", path = "../gmssl-sys" }
+
+[dev-dependencies]
+gmssl = { version = "0.1", path = "../gmssl" }

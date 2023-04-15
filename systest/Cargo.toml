@@ -1,0 +1,16 @@
+[package]
+name = "systest"
+version = "0.1.0"
+authors = ["Jason Honor <jasonhonor@outlook.com>"]
+edition = "2018"
+
+[dependencies]
+libc = "0.2"
+gmssl-sys = { path = "../gmssl-sys",features=[]}
+
+[build-dependencies]
+ctest2 = "0.4"
+
+[features]
+vendored = ['gmssl-sys/vendored']
+bindgen = ['gmssl-sys/bindgen']

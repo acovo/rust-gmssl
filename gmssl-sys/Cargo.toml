@@ -1,0 +1,33 @@
+[package]
+name = "gmssl-sys"
+version = "0.1.0"
+authors = [ "Jason Honor<jasonhonor@outlook.com>"]
+license = "MIT"
+description = "FFI bindings to GmSSL"
+repository = "https://github.com/acovo/rust-gmssl"
+readme = "README.md"
+categories = ["cryptography", "external-ffi-bindings"]
+links = "gmssl"
+build = "build/main.rs"
+edition = "2018"
+
+[features]
+vendored = ['gmssl-src']
+unstable_boringssl=[]
+
+[dependencies]
+libc = "0.2"
+bssl-sys = { version = "0.1.0", optional = true }
+
+[build-dependencies]
+bindgen = { version = "0.64.0", optional = true, features = ["experimental"] }
+cc = "1.0.61"
+gmssl-src = { version = "0.1", optional =true,git = "https://github.com/acovo/gmssl-src-rs.git" }
+pkg-config = "0.3.9"
+
+[target.'cfg(target_env = "msvc")'.build-dependencies]
+vcpkg = "0.2.8"
+
+# We don't actually use metadeps for annoying reasons but this is still here for tooling
+[package.metadata.pkg-config]
+gmssl = "1.0.1"

@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "gmssl",
+    "gmssl-errors",
+    "gmssl-macros",
+    "gmssl-sys",
+    "systest",
+]
