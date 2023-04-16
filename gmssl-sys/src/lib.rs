@@ -10,7 +10,7 @@
     overflowing_literals,
     unused_imports
 )]
-#![doc(html_root_url = "https://docs.rs/openssl-sys/0.9")]
+#![doc(html_root_url = "https://docs.rs/gmssl-sys/0.1")]
 #![recursion_limit = "128"] // configure fixed limit across all rust versions
 
 extern crate libc;
@@ -208,5 +208,6 @@ mod openssl {
         INIT.call_once(|| {});
     }
 }
+
 #[cfg(openssl)]
 pub use openssl::*;

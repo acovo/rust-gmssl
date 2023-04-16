@@ -2,7 +2,7 @@ use gmssl_src;
 use std::path::PathBuf;
 
 pub fn get_openssl(_target: &str) -> (Vec<PathBuf>, PathBuf) {
-    let artifacts = openssl_src::Build::new().build();
+    let artifacts = gmssl_src::Build::new().build();
     println!("cargo:vendored=1");
     println!(
         "cargo:root={}",
