@@ -4,7 +4,6 @@ GmSSL bindings for the Rust programming language.
 
 [Documentation](https://docs.rs/gmssl).
 
-
 ## Release Support
 
 The current supported release of `gmssl` is 0.1 and `gmssl-sys` is 0.1.
