@@ -31,7 +31,7 @@ once_cell = "1.5.2"
 
 gmssl-macros = { version = "0.1.0" }
 ffi = { package = "gmssl-sys", version = "0.1" }
-gmssl-sys = { version = "0.1.0", path = "../gmssl-sys" }
+gmssl-sys = { version = "0.1" }
 
 [dev-dependencies]
 hex = "0.3"
