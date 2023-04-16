@@ -1,6 +1,6 @@
 [package]
 name = "gmssl-sys"
-version = "0.1.1"
+version = "0.1.2"
 authors = [ "Jason Honor<jasonhonor@outlook.com>"]
 license = "MIT"
 description = "FFI bindings to GmSSL"
